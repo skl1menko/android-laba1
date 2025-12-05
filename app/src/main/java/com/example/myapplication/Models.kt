@@ -10,6 +10,7 @@ sealed class ListItem {
 
     data class Product(
         val id: Int,
+        val categoryId: Int,
         val name: String,
         val price: Double,
         val description: String
