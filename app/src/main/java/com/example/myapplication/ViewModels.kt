@@ -10,6 +10,9 @@ import kotlinx.coroutines.flow.stateIn
 
 class HomeViewModel : ViewModel() {
     var labelText by mutableStateOf("Натисніть кнопку для зміни тексту")
+
+    private val repository = ItemsRepository()
+    val items: List<ListItem> = repository.getItems()
 }
 
 class ProfileViewModel : ViewModel() {
